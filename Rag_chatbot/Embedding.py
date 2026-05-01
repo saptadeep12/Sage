@@ -5,10 +5,10 @@ from sentence_transformers import SentenceTransformer
 # ── 1. Load your CSV ──────────────────────────────────────────
 df = pd.read_csv(
     "../data/text1.csv",
-    quotechar='"',        # fields wrapped in quotes are treated as one
-    quoting=0,            # QUOTE_MINIMAL
+    quotechar='"',
+    quoting=0,
     engine="python",
-    on_bad_lines="warn"   # shows which lines are bad instead of crashing
+    on_bad_lines="warn"
 )
 
 # Assumes columns are named 'context' and 'response'

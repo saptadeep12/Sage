@@ -103,6 +103,13 @@ def health():
 def serve_ui():
     return FileResponse(os.path.join(BASE_DIR, "templates", "chat_ui.html"))
 
+@app.get("/chat_ui.js")
+def serve_ui_script():
+    return FileResponse(
+        os.path.join(BASE_DIR, "templates", "chat_ui.js"),
+        media_type="application/javascript"
+    )
+
 @app.post("/chat")
 def chat(req: ChatRequest):
     global chat_history
@@ -131,13 +138,6 @@ def chat(req: ChatRequest):
         "- Use simple, human language — never clinical or robotic\n\n"
         "- Never leave a sentence unfinished\n\n"
         "- Never force a question at the end just to fill space\n\n"
-        
-        # "## What You Help With\n"
-        # "- Stress, anxiety, and overthinking\n"
-        # "- Loneliness and relationship struggles\n"
-        # "- Low motivation and self-doubt\n"
-        # "- Grief, loss, and difficult life transitions\n"
-        # "- Building healthy habits and emotional resilience\n\n"
 
         "## Hard Rules\n"
         "- Never diagnose any mental health condition\n"
@@ -219,8 +219,5 @@ def chat(req: ChatRequest):
         }
     )
 
-    # answer = call_groq(system_prompt, req.message)
-    #
-    # return ChatResponse(answer=answer, sources=hits)
 
-# python -m uvicorn backend:app --reload --port 5000
+

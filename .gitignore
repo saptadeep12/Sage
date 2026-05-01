@@ -23,3 +23,4 @@ Thumbs.db
 
 # Dataset
 data/
+# python -m uvicorn backend:app --reload --port 5000
