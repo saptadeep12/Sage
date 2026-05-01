@@ -31,7 +31,8 @@ Sage/
 ├── Rag_chatbot/
 │   │
 │   ├── templates/
-│   │   └── chat_ui.html        # Chat interface
+│   │   ├── chat_ui.html        # Chat interface
+│   │   └── chat_ui.js          # Chat functionality (frontend logic)
 │   │
 │   ├── backend.py              # FastAPI server + RAG logic
 │   │
