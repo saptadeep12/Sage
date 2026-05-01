@@ -23,26 +23,35 @@ that helps users navigate mental and emotional challenges in their day to day li
 | LLM | Groq (openai/gpt-oss-120b) |
 | Frontend | HTML, CSS, Vanilla JS |
 
----
+# 📁 Project Structure
 
-## 📁 Project Structure
-
+```text
 Sage/
+│
 ├── Rag_chatbot/
+│   │
 │   ├── templates/
-│   │   └── chat_ui.html       # Chat interface
-│   ├── backend.py             # FastAPI server + RAG logic
-│   ├── Embedding.py           # Generates vector embeddings from CSV
-│   └── query.py               # Test retrieval from ChromaDB
-├── data/
-│   └── text1.csv              # Dataset (context + response columns)
-├── chroma_db/                 # Vector database (auto-generated, not pushed)
-├── .env                       # API keys (not pushed)
-├── .gitignore
-├── requirements.txt
-└── README.md
-
----
+│   │   └── chat_ui.html        # Chat interface
+│   │
+│   ├── backend.py              # FastAPI server + RAG logic
+│   │
+│   ├── Embedding.py            # Generates vector embeddings from CSV
+│   │
+│   ├── query.py                # Test retrieval from ChromaDB
+│   │
+│   ├── data/
+│   │   └── text1.csv           # Dataset (context + response columns)
+│   │
+│   ├── chroma_db/              # Vector database
+│   │   (auto-generated, not pushed)
+│   │
+│   ├── .env                    # API keys (not pushed)
+│   │
+│   ├── .gitignore
+│   │
+│   ├── requirements.txt
+│   │
+│   └── README.md
 
 ## ⚙️ Setup
 
